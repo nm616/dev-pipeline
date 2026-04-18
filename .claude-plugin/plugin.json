@@ -4,9 +4,23 @@
   "description": "Generates a tailored suite of development agent files for any new project — requirements, research, Figma mockup, code generation, and QA.",
   "author": {
     "name": "Nigel Morford",
-    "email": "nigel.morford@gmail.com"
+    "url": "https://github.com/nm616"
   },
-  "repository": "https://github.com/nigelmorford/dev-pipeline",
+  "repository": "https://github.com/nm616/dev-pipeline",
+  "homepage": "https://github.com/nm616/dev-pipeline#readme",
   "license": "MIT",
-  "keywords": ["agents", "dev-pipeline", "project-setup", "scaffolding", "workflow"]
+  "keywords": [
+    "claude-code",
+    "claude-code-plugin",
+    "ai-agents",
+    "dev-pipeline",
+    "project-scaffolding",
+    "agent-generator",
+    "prd",
+    "code-generation",
+    "qa-automation",
+    "figma-mockup",
+    "project-setup",
+    "workflow-automation"
+  ]
 }
