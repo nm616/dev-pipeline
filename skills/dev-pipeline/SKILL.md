@@ -121,11 +121,11 @@ Generated: <date>
 
 | Step | Agent | Invoke | Output |
 |---|---|---|---|
-| 1 | Requirements | `/requirements` | `PRD.md` |
-| 2 | Research | `/research` | `RESEARCH.md` |
-| 3 | Mockup | `/mockup` | `MOCKUP.md` + Figma board |
-| 4 | Code Generation | `/codegen` | Source code |
-| 5 | QA & Testing | `/qa` | `QA.md`, `TESTS.md` |
+| 1 | Requirements | `/dev-pipeline:requirements` | `PRD.md` |
+| 2 | Research | `/dev-pipeline:research` | `RESEARCH.md` |
+| 3 | Mockup | `/dev-pipeline:mockup` | `MOCKUP.md` + Figma board |
+| 4 | Code Generation | `/dev-pipeline:codegen` | Source code |
+| 5 | QA & Testing | `/dev-pipeline:qa` | `QA.md`, `TESTS.md` |
 
 ## Prerequisites
 
@@ -143,18 +143,24 @@ All agents are in `.claude/agents/` and are pre-loaded with context for this pro
 
 ## Phase 5: Report to User
 
-```
-Agent pipeline generated.
+Tell the user:
 
-.claude/agents/
-  requirements.md  — requirements interview → PRD.md
-  research.md      — tech stack research → RESEARCH.md
-  mockup.md        — Figma wireframe → MOCKUP.md
-  codegen.md       — code generation (with agent teams)
-  qa.md            — code review + testing → QA.md, TESTS.md
+> **Pipeline agents generated.**
+>
+> Five agents are ready in `.claude/agents/`, each pre-loaded with context for this project.
+>
+> Run them in order using the pipeline runner skills:
+>
+> | Step | Skill | Output |
+> |---|---|---|
+> | 1 | `/dev-pipeline:requirements` | `PRD.md` |
+> | 2 | `/dev-pipeline:research` | `RESEARCH.md` |
+> | 3 | `/dev-pipeline:mockup` | `MOCKUP.md` + Figma board |
+> | 4 | `/dev-pipeline:codegen` | Source code |
+> | 5 | `/dev-pipeline:qa` | `QA.md`, `TESTS.md` |
+>
+> Each runner checks prerequisites automatically and tells you what to run next.
+>
+> **Start now → `/dev-pipeline:requirements`**
 
-Start with /requirements when ready.
-See PIPELINE.md for the full sequence.
-```
-
-Flag any missing prerequisites clearly so the user knows what to set up before reaching that step.
+Flag any missing prerequisites (context7, Figma MCP, agent teams) clearly so the user knows what to set up before reaching that step.
