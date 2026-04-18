@@ -1,0 +1,12 @@
+{
+  "name": "dev-pipeline",
+  "version": "1.0.0",
+  "description": "Generates a tailored suite of development agent files for any new project — requirements, research, Figma mockup, code generation, and QA.",
+  "author": {
+    "name": "Nigel Morford",
+    "email": "nigel.morford@gmail.com"
+  },
+  "repository": "https://github.com/nigelmorford/dev-pipeline",
+  "license": "MIT",
+  "keywords": ["agents", "dev-pipeline", "project-setup", "scaffolding", "workflow"]
+}
