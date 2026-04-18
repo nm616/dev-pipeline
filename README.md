@@ -16,7 +16,7 @@ Invoke `/dev-pipeline` in any new project. It scans your files, interviews you a
 | `codegen` | Orchestrates parallel agent teams to generate the full codebase | Source code |
 | `qa` | Security review + comprehensive test suite generation and execution | `QA.md`, `TESTS.md` |
 
-**The skill generates agents — it does not run them.** You invoke each agent in sequence when you're ready.
+**The skill generates agents — it does not run them.** You then invoke each step using the built-in runner skills, in order.
 
 ## Why Use This?
 
@@ -62,12 +62,14 @@ After it runs, you'll have:
 
 ## Running the Pipeline
 
+Each step is a runner skill that checks prerequisites automatically and suggests the next step when done:
+
 ```
-/requirements   →  interviews you thoroughly, writes PRD.md
-/research       →  researches and picks your tech stack, writes RESEARCH.md
-/mockup         →  creates Figma wireframes, loops until you approve, writes MOCKUP.md
-/codegen        →  generates the full codebase (parallel agent teams where possible)
-/qa             →  security review + tests, writes QA.md and TESTS.md
+/dev-pipeline:requirements   →  interviews you thoroughly, writes PRD.md
+/dev-pipeline:research       →  researches and picks your tech stack, writes RESEARCH.md
+/dev-pipeline:mockup         →  creates Figma wireframes, loops until you approve, writes MOCKUP.md
+/dev-pipeline:codegen        →  generates the full codebase (parallel agent teams where possible)
+/dev-pipeline:qa             →  security review + tests, writes QA.md and TESTS.md
 ```
 
 ## Optional Prerequisites
