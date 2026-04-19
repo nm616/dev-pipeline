@@ -1,0 +1,30 @@
+{
+  "name": "dev-pipeline",
+  "id": "dev-pipeline",
+  "owner": {
+    "name": "nm616"
+  },
+  "metadata": {
+    "description": "Generates a tailored suite of development agent files for any new project — requirements, research, Figma mockup, code generation, and QA.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "dev-pipeline",
+      "source": "./",
+      "description": "Scans your project, asks targeted questions, and writes five ready-to-use agents into .claude/agents/ covering requirements, research, mockup, code generation, and QA.",
+      "version": "1.0.0",
+      "author": {
+        "name": "nm616"
+      },
+      "keywords": [
+        "agents",
+        "scaffolding",
+        "pipeline",
+        "code-generation",
+        "workflow"
+      ],
+      "category": "workflow"
+    }
+  ]
+}

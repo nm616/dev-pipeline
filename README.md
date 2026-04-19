@@ -27,18 +27,18 @@ Invoke `/dev-pipeline:dev-pipeline` in any new project. It scans your files, int
 
 ## Installation
 
-### Local install (current)
+### From marketplace
+
+```
+/plugin marketplace add nm616/dev-pipeline
+/plugin install dev-pipeline@dev-pipeline
+```
+
+### Local install
 
 ```bash
 git clone https://github.com/nm616/dev-pipeline
 claude --plugin-dir ./dev-pipeline
-```
-
-### Marketplace (when available)
-
-```
-/plugin install dev-pipeline
-/reload-plugins
 ```
 
 ## Usage
