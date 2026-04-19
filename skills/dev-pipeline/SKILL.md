@@ -1,14 +1,6 @@
 ---
-name: dev-pipeline
-description: Generates a tailored suite of development agent files for a new project. Scans the project, asks targeted questions, then writes five ready-to-use agents into .claude/agents/ covering requirements, research, mockup, code generation, and QA.
-when_to_use: |
-  Trigger when the user says "set up agents for my project", "create dev pipeline agents",
-  "scaffold agents", "generate agents for this project", "build out the agents",
-  "I'm starting a new project and want agents to help", or opens a fresh/empty project
-  and describes what they want to build.
+description: Generates a tailored suite of development agent files for a new project. Scans the project, asks targeted questions, then writes five ready-to-use agents into .claude/agents/ covering requirements, research, mockup, code generation, and QA. Use when the user says "set up agents for my project", "create dev pipeline agents", "scaffold agents", "generate agents for this project", "build out the agents", "I'm starting a new project and want agents to help", or describes a new project they want to build.
 disable-model-invocation: true
-effort: high
-allowed-tools: Read Write Bash Glob
 ---
 
 # Dev Pipeline — Agent Generator

@@ -1,9 +1,6 @@
 ---
-name: codegen
 description: Run the code generation agent for this project. Step 4 of the dev-pipeline workflow. Generates the full codebase using agent teams where efficient. Use when the mockup is approved and the user is ready to generate code.
 disable-model-invocation: true
-effort: max
-allowed-tools: Read Write Bash
 ---
 
 # Dev Pipeline — Step 4: Code Generation
@@ -13,7 +10,7 @@ echo "=== Dev Pipeline: Step 4 of 5 — Code Generation ==="
 if [ -f ".claude/agents/codegen.md" ]; then
   echo "✓ Codegen agent found"
 else
-  echo "✗ Codegen agent not found — run /dev-pipeline first"
+  echo "✗ Codegen agent not found — run /dev-pipeline:dev-pipeline first"
 fi
 if [ -f "PRD.md" ]; then
   echo "✓ PRD.md found"

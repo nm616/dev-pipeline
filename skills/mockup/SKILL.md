@@ -1,9 +1,6 @@
 ---
-name: mockup
 description: Run the mockup agent for this project. Step 3 of the dev-pipeline workflow. Creates a visual wireframe in Figma using MCP and loops until approved, producing MOCKUP.md. Use when research is done and the user wants to design the UI.
 disable-model-invocation: true
-effort: high
-allowed-tools: Read Write Bash
 ---
 
 # Dev Pipeline — Step 3: Mockup
@@ -13,7 +10,7 @@ echo "=== Dev Pipeline: Step 3 of 5 — Mockup ==="
 if [ -f ".claude/agents/mockup.md" ]; then
   echo "✓ Mockup agent found"
 else
-  echo "✗ Mockup agent not found — run /dev-pipeline first"
+  echo "✗ Mockup agent not found — run /dev-pipeline:dev-pipeline first"
 fi
 if [ -f "PRD.md" ]; then
   echo "✓ PRD.md found"

@@ -1,9 +1,6 @@
 ---
-name: qa
 description: Run the QA and testing agent for this project. Step 5 of the dev-pipeline workflow. Reviews the codebase for security issues and quality, creates and runs a full test suite, producing QA.md and TESTS.md. Use after code generation is complete.
 disable-model-invocation: true
-effort: high
-allowed-tools: Read Write Bash
 ---
 
 # Dev Pipeline — Step 5: QA & Testing
@@ -13,7 +10,7 @@ echo "=== Dev Pipeline: Step 5 of 5 — QA & Testing ==="
 if [ -f ".claude/agents/qa.md" ]; then
   echo "✓ QA agent found"
 else
-  echo "✗ QA agent not found — run /dev-pipeline first"
+  echo "✗ QA agent not found — run /dev-pipeline:dev-pipeline first"
 fi
 if [ -f "PRD.md" ]; then
   echo "✓ PRD.md found"
@@ -33,7 +30,7 @@ else
 fi
 ```
 
-If the QA agent is **not found**: stop and tell the user to run `/dev-pipeline` first to generate agents.
+If the QA agent is **not found**: stop and tell the user to run `/dev-pipeline:dev-pipeline` first to generate agents.
 
 If no source code is detected: confirm with the user before proceeding — the code generation step may not have run yet.
 

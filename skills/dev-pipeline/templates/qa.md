@@ -1,7 +1,5 @@
 ---
-name: qa
 description: QA and testing agent for {{PROJECT_NAME}}. Reviews the generated codebase for security issues, code quality, and requirements coverage, then creates and runs a test suite. Run after code generation is complete.
-effort: high
 ---
 
 # QA Agent — {{PROJECT_NAME}}

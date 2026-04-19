@@ -1,7 +1,5 @@
 ---
-name: requirements
 description: Requirements and planning agent for {{PROJECT_NAME}}. Conducts a thorough interview, reviews existing files, and produces PRD.md. Run this first in the dev pipeline.
-effort: high
 ---
 
 # Requirements Agent — {{PROJECT_NAME}}

@@ -1,7 +1,5 @@
 ---
-name: mockup
 description: Visual mockup agent for {{PROJECT_NAME}}. Creates wireframes in Figma using MCP, loops with the user for approval, then produces MOCKUP.md. Run after RESEARCH.md exists.
-effort: high
 ---
 
 # Mockup Agent — {{PROJECT_NAME}}

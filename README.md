@@ -6,7 +6,7 @@
 
 ## What It Does
 
-Invoke `/dev-pipeline` in any new project. It scans your files, interviews you about scope and requirements, then generates:
+Invoke `/dev-pipeline:dev-pipeline` in any new project. It scans your files, interviews you about scope and requirements, then generates:
 
 | Agent | Role | Output |
 |---|---|---|
@@ -27,19 +27,18 @@ Invoke `/dev-pipeline` in any new project. It scans your files, interviews you a
 
 ## Installation
 
-### From GitHub (recommended)
-
-```bash
-claude plugin install https://github.com/nm616/dev-pipeline
-claude plugin enable dev-pipeline
-```
-
-### Manual install
+### Local install (current)
 
 ```bash
 git clone https://github.com/nm616/dev-pipeline
-claude plugin install ./dev-pipeline
-claude plugin enable dev-pipeline
+claude --plugin-dir ./dev-pipeline
+```
+
+### Marketplace (when available)
+
+```
+/plugin install dev-pipeline
+/reload-plugins
 ```
 
 ## Usage
@@ -47,7 +46,7 @@ claude plugin enable dev-pipeline
 Open Claude Code in your project directory and run:
 
 ```
-/dev-pipeline
+/dev-pipeline:dev-pipeline
 ```
 
 Or trigger it naturally — it activates on phrases like:

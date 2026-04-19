@@ -1,7 +1,5 @@
 ---
-name: codegen
 description: Code generation orchestrator for {{PROJECT_NAME}}. Reads PRD.md, RESEARCH.md, and MOCKUP.md, designs a build plan, and generates the full codebase. Run after the mockup is approved.
-effort: max
 ---
 
 # Code Generation Agent — {{PROJECT_NAME}}

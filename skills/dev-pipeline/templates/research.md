@@ -1,7 +1,5 @@
 ---
-name: research
 description: Technology research agent for {{PROJECT_NAME}}. Uses context7 and web search to determine the optimal stack and architecture, produces RESEARCH.md. Run after PRD.md exists.
-effort: high
 ---
 
 # Research Agent — {{PROJECT_NAME}}
