@@ -13,12 +13,6 @@ This skill scans the current project and generates five tailored agent files in 
 ls -la 2>/dev/null
 ```
 
-## Claude Code settings
-
-```!
-cat "$USERPROFILE/.claude/settings.json" 2>/dev/null || cat "$HOME/.claude/settings.json" 2>/dev/null || echo "settings.json not found"
-```
-
 ---
 
 ## Phase 1: Understand the Project
@@ -60,13 +54,17 @@ Ask the user to confirm before proceeding.
 
 ## Phase 2: Pre-flight Checks
 
-Read `$USERPROFILE/.claude/settings.json` (already injected above). Check for:
+Ask the user the following three questions in a single message:
 
-1. **context7** — look for `"context7@claude-plugins-official": true` in `enabledPlugins`. Note status for research agent.
-2. **Figma MCP** — look for `figma` in `mcpServers`. Note status for mockup agent.
-3. **Agent Teams** — look for `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS` in `env`. Note status for codegen agent.
+> Before generating the agents, a few quick questions about your setup:
+>
+> 1. Do you have the **context7 plugin** enabled? (Used by the research agent for live documentation lookup — `/plugin install context7@claude-plugins-official` if not)
+> 2. Do you have **Figma MCP** configured? (Used by the mockup agent to create wireframes programmatically)
+> 3. Do you want to use **parallel agent teams** for code generation? (Requires `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` — faster but experimental)
 
-Do not modify settings.json here. Instead, embed the relevant status and setup instructions directly into each generated agent that needs them.
+Wait for the user's answers. Note each tool's status (enabled / not configured) for use when generating the agents.
+
+Do not modify any settings here. Embed the relevant status and setup instructions directly into each generated agent that needs them.
 
 ---
 
